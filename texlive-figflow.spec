@@ -1,3 +1,9 @@
+# revision 21462
+# category Package
+# catalog-ctan /macros/plain/contrib/figflow
+# catalog-date 2011-02-18 10:42:52 +0100
+# catalog-license other-free
+# catalog-version undef
 Name:		texlive-figflow
 Version:	20110218
 Release:	1
@@ -41,6 +47,7 @@ in this area.
 %files
 %{_texmfdistdir}/tex/plain/figflow/figflow.tex
 %doc %{_texmfdistdir}/doc/plain/figflow/README.figflow
+%doc %{_tlpkgobjdir}/*.tlpobj
 
 #-----------------------------------------------------------------------
 %prep
@@ -51,3 +58,5 @@ in this area.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar tex doc %{buildroot}%{_texmfdistdir}
+mkdir -p %{buildroot}%{_tlpkgobjdir}
+cp -fpa tlpkg/tlpobj/*.tlpobj %{buildroot}%{_tlpkgobjdir}
