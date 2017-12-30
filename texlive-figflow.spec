@@ -5,8 +5,8 @@
 # catalog-license other-free
 # catalog-version undef
 Name:		texlive-figflow
-Version:	20110218
-Release:	10
+Version:	20170414
+Release:	1
 Summary:	Flow text around a figure
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/plain/contrib/figflow
