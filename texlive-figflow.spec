@@ -1,18 +1,12 @@
-# revision 21462
-# category Package
-# catalog-ctan /macros/plain/contrib/figflow
-# catalog-date 2011-02-18 10:42:52 +0100
-# catalog-license other-free
-# catalog-version undef
 Name:		texlive-figflow
-Version:	20190228
+Version:	21462
 Release:	1
 Summary:	Flow text around a figure
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/plain/contrib/figflow
 License:	OTHER-FREE
-Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/figflow.tar.xz
-Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/figflow.doc.tar.xz
+Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/figflow.r%{version}.tar.xz
+Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/figflow.doc.r%{version}.tar.xz
 BuildArch:	noarch
 BuildRequires:	texlive-tlpkg
 Requires(pre):	texlive-tlpkg
@@ -28,12 +22,12 @@ wrapfig, floatflt and picins support the needs of LaTeX users
 in this area.
 
 %post
-    %{_sbindir}/texlive.post
+%{_sbindir}/texlive.post
 
 %postun
-    if [ $1 -eq 0 ]; then
+if [ $1 -eq 0 ]; then
 	%{_sbindir}/texlive.post
-    fi
+fi
 
 #-----------------------------------------------------------------------
 %files
@@ -42,24 +36,10 @@ in this area.
 
 #-----------------------------------------------------------------------
 %prep
-%setup -c -a0 -a1
+%autosetup -p1 -c -a1
 
 %build
 
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar tex doc %{buildroot}%{_texmfdistdir}
-
-
-%changelog
-* Wed Jan 04 2012 Paulo Andrade <pcpa@mandriva.com.br> 20110218-2
-+ Revision: 751838
-- Rebuild to reduce used resources
-
-* Sat Nov 05 2011 Paulo Andrade <pcpa@mandriva.com.br> 20110218-1
-+ Revision: 718435
-- texlive-figflow
-- texlive-figflow
-- texlive-figflow
-- texlive-figflow
-
