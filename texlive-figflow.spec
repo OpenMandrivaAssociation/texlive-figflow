@@ -3,7 +3,7 @@ Version:	21462
 Release:	2
 Summary:	Flow text around a figure
 Group:		Publishing
-URL:		http://www.ctan.org/tex-archive/macros/plain/contrib/figflow
+URL:		https://www.ctan.org/tex-archive/macros/plain/contrib/figflow
 License:	OTHER-FREE
 Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/figflow.r%{version}.tar.xz
 Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/figflow.doc.r%{version}.tar.xz
